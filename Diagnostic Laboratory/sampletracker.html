@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Laboratory Services Home</title>
+    <link rel="stylesheet" href="./sampletracker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+
+      $('.highlights').hover(
+      function(){
+        $(this).css('padding', '10px');
+        $(this).children('.serviceicon').css('transform', 'rotate(90deg)')
+      }
+      ,
+      function(){
+        $(this).css('padding', '0px');
+        $(this).children('.serviceicon').css('transform', 'rotate(0deg)')
+      });
+
+
+      // $('.highlights').click(function(){
+      //   $('.serviceicon').css('transform', 'rotate(90deg)');
+      // });
+
+      // function(){
+      //   $('#icon1').css('transform', 'rotate(90deg)');
+      // });
+
+
+      //
+      // $('.highlights_dark').hover(function(){
+      //   $(this).css('background-color', '#67acd7');
+      // }, function(){
+      //   $(this).css('background-color', '#216f9d');
+      // });
+
+    });
+    </script>
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+
+
+
+      <div class="header">
+        <img src="./infinitylabs2.jpg" alt="logo" .class="large_logo">
+        <div>
+          <h1>Infinity</h1>
+          <h1>Diagnostic</h1>
+          <h1>Laboratories</h1>
+        </div>
+      </div>
+
+
+      <div class="navbar">
+        <button type="button" class="button_dark"><a href="./sampletracker.html">Home</a></button>
+        <button type="button" class="button_dark"><a href="./services.html">Services</a></button>
+        <button type="button" class="button_dark"><a href="./insidesampletracker.html">Sample Tracker</a></button>
+        <button type="button" class="button_dark"><a href="./contact.html">Contact</a></button>
+      </div>
+
+
+      <div class="frontbgimg_main">
+        <p> A full-service independent diagnostic laboratory with rapid turn-around times, comprehensive physician support, customizeable test menus, and a secure reporting portal for streamlined access to patient results. </p>
+        <p><span id="subtitle">The Possibilities are <span class="orange">Infinite</span></span></p>
+      </div>
+
+      <div class="main">
+        <div class="our_services"><h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+      </div>
+
+        <div id="overview">
+          <div class="highlights highlights_pale" id="highlights1">
+            <img src="./capture.png" alt="logo" class="serviceicon" id="icon1">
+            <h3><a href="#">Preventative</a></h3>
+            <p>About preventative care coverage and recommended tests protocols.</p>
+          </div><div class="highlights highlights_dark" id="highlights2">
+            <img src="./capture.png" alt="logo" class="serviceicon">
+            <h3><a href="#">Diagnostic</a></h3>
+            <p>Menu of diagnostic laboratory services by subspecialty.</p>
+          </div><div class="highlights highlights_pale" id="highlights3">
+            <img src="./capture.png" alt="logo" class="serviceicon">
+            <h3><a href="#">Maternity</a></h3>
+            <p>Specialised care for women and infants.</p>
+          </div><div class="highlights highlights_dark" id="highlights4">
+            <img src="./capture.png" alt="logo" class="serviceicon">
+            <h3><a href="#">Genotyping</a></h3>
+            <p>Provide personalised care with a full suite of genetic screenings for your patients.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="our_services"><h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+      </div>
+      </div>
+
+
+      <footer>
+        <div class="bottom_links">
+          <button type="button pale_button"><p><a href="#">Home</a></button><button type="button dark_button"><p><a href="#">Services</a></p></button><button type="button pale_button"><p><a href="#">Ipsum</a></p></button><button type="button dark button"><p><a href="#">Contact</a></p></button>
+
+        </div>
+      </footer>
+
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Laboratory Services Home</title>
+    <link rel="stylesheet" href="./sampletracker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+     $('.lists_of_tests').hide();
+     $('.serviceline p').hide();
+
+
+      $(function() {
+        $('.serviceline').click(function() {
+          if($(this).children('p').is(":hidden") ) {
+            $(this).children('p').slideDown();
+            $(this).children('img').css('transform', 'rotate(90deg)');
+            $(this).css('background-color','#3093d1')
+          }
+          else
+          {
+            $(this).children('p').hide();
+            $(this).children('img').css('transform', 'rotate(0deg)');
+            $(this).css('background-color','#216f9d')
+          }
+        });
+      });
+
+
+
+    });
+    </script>
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="header">
+        <img src="./infinitylabs2.jpg" alt="logo" .class="large_logo">
+        <div>
+          <h1>Infinity</h1>
+          <h1>Diagnostic</h1>
+          <h1>Laboratories</h1>
+        </div>
+      </div>
+
+
+      <div class="navbar">
+        <button type="button" class="button_dark"><a href="./sampletracker.html">Home</a></button>
+        <button type="button" class="button_dark"><a href="./services.html">Services</a></button>
+        <button type="button" class="button_dark"><a href="./insidesampletracker.html">Sample Tracker</a></button>
+        <button type="button" class="button_dark"><a href="./contact.html">Contact</a></button>
+      </div>
+
+
+      <div class="frontbgimg_services">
+        <img src="./dropper.jpg" alt="" id="glass">
+      </div>
+
+      <div class="servicesmain">
+        <button class="serviceline" id="tox_button"><img src="./capture.png" alt="logo" class="button_icon">
+          <br>
+          <span class="service_title">Urine Toxicology</span>
+          <p>Alcohols</p>
+          <p>Amphetamines</p>
+          <p>Analgesics</p>
+          <p>Antidepressants</p>
+          <p>Antiepileptics</p>
+        </button>
+
+
+        <button class="serviceline" id="blood_button"><img src="./capture.png" alt="logo" class="button_icon">
+          <br>
+          <span class="service_title">Hematology</span>
+          <p>Alcohols</p>
+          <p>Amphetamines</p>
+          <p>Analgesics</p>
+          <p>Antidepressants</p>
+          <p>Antiepileptics</p>
+        </button>
+
+        <button class="serviceline" id="dna_button"><img src="./capture.png" alt="logo" class="button_icon">
+          <br>
+          <span class="service_title">Genetic Testing</span>
+          <p>Alcohols</p>
+          <p>Amphetamines</p>
+          <p>Analgesics</p>
+          <p>Antidepressants</p>
+          <p>Antiepileptics</p>
+        </button>
+      </div>
+
+      <!-- <div id="testmenus">
+
+        <div class="lists_of_tests" id="tox_tests">
+          <p>Alcohols</p>
+          <p>Amphetamines</p>
+          <p>Analgesics</p>
+          <p>Antidepressants</p>
+          <p>Antiepileptics</p>
+        </div>
+
+        <div class="lists_of_tests" id="blood_tests">
+          <p>Alcohols</p>
+          <p>Amphetamines</p>
+          <p>Analgesics</p>
+          <p>Antidepressants</p>
+          <p>Antiepileptics</p>
+        </div>
+
+        <div class="lists_of_tests" id="dna_tests">
+          <p>Alcohols</p>
+          <p>Amphetamines</p>
+          <p>Analgesics</p>
+          <p>Antidepressants</p>
+          <p>Antiepileptics</p>
+        </div> -->
+
+
+      <!-- </div> -->
+
+      <footer>
+        <div class="bottom_links">
+          <button type="button pale_button"><p><a href="#">Home</a></button><button type="button dark_button"><p><a href="#">Services</a></p></button><button type="button pale_button"><p><a href="#">Ipsum</a></p></button><button type="button dark button"><p><a href="#">Contact</a></p></button>
+
+        </div>
+      </footer>
+
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sample Tracker</title>
+    <link rel="stylesheet" href="./sampletracker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery-latest.js"></script>
+    <script type="text/javascript" src="./jquery.tablesorter.js"></script>
+
+
+<script>
+$(document).ready(function(){
+
+    $("#myTable").tablesorter();
+
+});
+</script>
+
+<script>
+$(document).ready(function(){
+
+
+    $('form').hide();
+
+    $("table button").click(function(){
+        alert("Patient Details Go Here");
+    });
+
+    $("#add_patient").click(function(){
+      $('form').show();
+    });
+  });
+</script>
+
+<!-- <script>
+$(document).ready(function(){
+
+    $('form').submit(function() {
+      var attrArray = [];
+      var name = $('#name').attr('value');
+      attrArray.push(name);
+      attrArray.push('<button>View Patient</button>');
+      append_data(attrArray);
+      return false;
+    });
+
+    function append_data(data) {
+      var html = $('#table_content').html()
+      console.log(typeof(html))
+      var htmlString = "<tr>";
+      for (var i = 0; i < data.length; i++) {
+        htmlString += '<td>' + data[i] + "</td>";
+      }
+      htmlString += "</tr>";
+      html += htmlString
+      $("#table_content").html(html);
+    }
+
+  });
+
+</script> -->
+
+<script>
+
+$(document).ready(function(){
+
+    $('form').submit(function(){
+      $('table').append('<tr><td>'+$('input[name="patient_name"]').val()+'</td><td>'+$('input[name="dob"]').val()+'</td><td>'+$('input[name="physician"]').val()+'</td><td>'+$('input[name="received"]').val()+'</td><td>'+$('input[name="type"]').val()+'</td><td>'+$('input[name="status"]').val()+'</td></tr>');
+      return false;
+    });
+  });
+
+</script>
+
+
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+
+
+      <div class="header">
+        <img src="./infinitylabs2.jpg" alt="logo" .class="large_logo">
+        <div>
+          <h1>Infinity</h1>
+          <h1>Diagnostic</h1>
+          <h1>Laboratories</h1>
+        </div>
+        <button id="add_patient">Add Sample</button>
+      </div>
+
+
+
+      <div class="navbar">
+        <button type="button" class="button_dark"><a href="./sampletracker.html">Home</a></button>
+        <button type="button" class="button_dark"><a href="./services.html">Services</a></button>
+        <button type="button" class="button_dark"><a href="./insidesampletracker.html">Sample Tracker</a></button>
+        <button type="button" class="button_dark"><a href="./contact.html">Contact</a></button>
+      </div>
+
+      <div id="alternate_banner">
+        <p> Sample Tracker </p>
+      </div>
+
+      <div class="main" id="trackermain">
+
+<form class="form" action="index.html" method="post">
+
+<p>Last, First: <input type="text" name="patient_name" id="name"></p>
+<p>DOB: <input type="date" name="dob" id="dob"></p>
+<p>Physician: <input type="text" name="physician" id="physician"></p>
+<p>Received: <input type="date" name="received" id="received"></p>
+</p>Type: <select name="sampletype"></p>
+      <option value="urine">Urine</option>
+      <option value="blood">Blood</option>
+      <option value="dna">DNA</option>
+      </select>
+</p>Type: <select name="status"></p>
+      <option value="processing">Processing</option>
+      <option value="on_hold">On-Hold</option>
+      <option value="transferred">Transferred</option>
+      <option value="reported">Reported</option>
+      </select>
+<p><button type="submit" id="submit">Add</button></p>
+
+
+</form>
+
+        <table id="myTable" class="tablesorter">
+          <thead>
+            <th>Patient Name</th>
+            <th>DOB</th>
+            <th>Physician</th>
+            <th>Received</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Overview</th>
+          </thead>
+          <tbody id="table_content">
+            <tr class="rows_pale">
+              <td>Jones, Amanda</td>
+              <td>4/1/88</td>
+              <td>McCarthy, Jane</td>
+              <td>8/20/17</td>
+              <td>Blood</td>
+              <td>Processing</td>
+              <td><button id="test_button">View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Grant, Phyllis</td>
+              <td>9/9/99</td>
+              <td >Gupta, Seema</td>
+              <td>8/19/17</td>
+              <td>Urine</td>
+              <td>Processing</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_pale">
+              <td>Kilkenny, Cartman</td>
+              <td>4/5/54</td>
+              <td>Petrov, Simon</td>
+              <td>8/20/17</td>
+              <td>DNA</td>
+              <td>On Hold</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Anderson, John</td>
+              <td>10/31/86</td>
+              <td>Beaty, Barbara</td>
+              <td>8/19/17</td>
+              <td>Blood</td>
+              <td>Processing</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_pale">
+              <td>Marshall, Marvin</td>
+              <td>1/1/46</td>
+              <td>Blackwell, Bonnie</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Henderson, Harry</td>
+              <td>5/9/68</td>
+              <td>Patel, Narendra</td>
+              <td>8/10/17</td>
+              <td>Urine</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_pale">
+              <td>Granger, Hermione</td>
+              <td>5/7/96</td>
+              <td>Pomfrey, Madame</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Potter, Harry</td>
+              <td>7/31/81</td>
+              <td>Pomfrey, Madame</td>
+              <td>5/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_pale">
+              <td>Weasley, Ron</td>
+              <td>12/6/92</td>
+              <td>Promfrey, Madame</td>
+              <td>9/17/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Marshall, Walter</td>
+              <td>5/7/96</td>
+              <td>Blackwell, Bonnie</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_pale">
+              <td>Marshall, Walter</td>
+              <td>5/7/96</td>
+              <td>Blackwell, Bonnie</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Marshall, Walter</td>
+              <td>5/7/96</td>
+              <td>Blackwell, Bonnie</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_pale">
+              <td>Marshall, Walter</td>
+              <td>5/7/96</td>
+              <td>Blackwell, Bonnie</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+            <tr class="rows_dark">
+              <td>Marshall, Walter</td>
+              <td>5/7/96</td>
+              <td>Blackwell, Bonnie</td>
+              <td>7/15/17</td>
+              <td>DNA</td>
+              <td>Reported</td>
+              <td><button>View Patient</button></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+      </div>
+
+
+    <footer>
+      <div class="bottom_links">
+        <button type="button pale_button"><p><a href="#">Home</a></button><button type="button dark_button"><p><a href="#">Services</a></p></button><button type="button pale_button"><p><a href="#">Ipsum</a></p></button><button type="button dark button"><p><a href="#">Contact</a></p></button>
+
+      </div>
+    </footer>
+
+  </body>
+</html>
